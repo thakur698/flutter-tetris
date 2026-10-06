@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:tetris/gamer/gamer.dart';
-import 'package:tetris/generated/l10n.dart';
+import 'package:block_drop/gamer/gamer.dart';
+import 'package:block_drop/generated/l10n.dart';
 
 class GameController extends StatelessWidget {
   const GameController({super.key});
@@ -253,42 +253,17 @@ class _Description extends StatelessWidget {
 
   final Widget child;
 
-  final AxisDirection direction;
-
   const _Description({
     required this.text,
-    this.direction = AxisDirection.down,
     required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
-    Widget widget;
-    switch (direction) {
-      case AxisDirection.right:
-        widget = Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[child, const SizedBox(width: 8), Text(text)]);
-        break;
-      case AxisDirection.left:
-        widget = Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[Text(text), const SizedBox(width: 8), child],
-        );
-        break;
-      case AxisDirection.up:
-        widget = Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[Text(text), const SizedBox(height: 8), child],
-        );
-        break;
-      case AxisDirection.down:
-        widget = Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[child, const SizedBox(height: 8), Text(text)],
-        );
-        break;
-    }
+    Widget widget = Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[child, const SizedBox(height: 8), Text(text)],
+    );
     return DefaultTextStyle(
       style: const TextStyle(fontSize: 12, color: Colors.black),
       child: widget,
@@ -325,7 +300,7 @@ class _ButtonState extends State<_Button> {
         behavior: HitTestBehavior.opaque,
         onTapDown: (_) async {
           setState(() {
-            _color = widget.color.withOpacity(0.5);
+            _color = widget.color.withValues(alpha: 0.5);
           });
           if (_timer != null) {
             return;

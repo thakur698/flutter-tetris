@@ -92,7 +92,7 @@ BEGIN
             VALUE "CompanyName", "com.example" "\0"
             VALUE "FileDescription", "flutter_tetris" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "flutter_tetris" "\0"
+            VALUE "InternalName", "com.block.drop" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "flutter_tetris.exe" "\0"
             VALUE "ProductName", "flutter_tetris" "\0"

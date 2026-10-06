@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/main.dart';
-import 'package:tetris/panel/controller.dart';
-import 'package:tetris/panel/screen.dart';
+import 'package:block_drop/main.dart';
+import 'package:block_drop/panel/controller.dart';
+import 'package:block_drop/panel/screen.dart';
 
 part 'page_land.dart';
 
@@ -36,7 +36,6 @@ class _ScreenDecoration extends StatelessWidget {
   final Widget child;
 
   const _ScreenDecoration({
-    super.key,
     required this.child,
   });
 

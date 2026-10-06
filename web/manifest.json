@@ -1,6 +1,6 @@
 {
-    "name": "flutter_tetris",
-    "short_name": "flutter_tetris",
+  "name": "BLock Drop",
+  "short_name": "BLock Drop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

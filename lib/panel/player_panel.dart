@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/material/briks.dart';
-import 'package:tetris/material/images.dart';
-import 'package:tetris/gamer/gamer.dart';
+import 'package:block_drop/material/briks.dart';
+import 'package:block_drop/material/images.dart';
+import 'package:block_drop/gamer/gamer.dart';
 
 const playerPanelPadding = 6;
 
